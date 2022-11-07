@@ -42,12 +42,24 @@ namespace CSApiRestPractice02.Domain {
         }
 
         public Customer(int customerId, Address address, string firstName, string lastName, string email, string password) {
+
             CustomerId = customerId;
             Address = address;
             FirstName = firstName;
             LastName = lastName;
             Email = email;
             Password = password;
+
+        }
+
+        public Customer(Address address, string firstName, string lastName, string email, string password) {
+
+            Address = address;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Password = password;
+
         }
 
         public Customer(int customerId, Address address, string firstName, string email, string password) {

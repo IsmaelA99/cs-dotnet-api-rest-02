@@ -42,12 +42,24 @@ namespace CSApiRestPractice02.Domain {
         }
 
         public Address(int addressId, string street, int postalCode, string province, string country, int phone) {
+
             AddressId = addressId;
             Street = street;
             PostalCode = postalCode;
             Province = province;
             Country = country;
             Phone = phone;
+
+        }
+
+        public Address(string street, int postalCode, string province, string country, int phone) {
+
+            Street = street;
+            PostalCode = postalCode;
+            Province = province;
+            Country = country;
+            Phone = phone;
+
         }
 
         public Address(int addressId, string street, int postalCode, string province, string country) {
@@ -61,6 +73,7 @@ namespace CSApiRestPractice02.Domain {
         }
 
         public override bool Equals(object? obj) {
+
             return obj is Address address &&
                    AddressId == address.AddressId &&
                    Street == address.Street &&
@@ -68,10 +81,13 @@ namespace CSApiRestPractice02.Domain {
                    Province == address.Province &&
                    Country == address.Country &&
                    Phone == address.Phone;
+
         }
 
         public override int GetHashCode() {
+
             return HashCode.Combine(AddressId, Street, PostalCode, Province, Country, Phone);
+
         }
 
     }
