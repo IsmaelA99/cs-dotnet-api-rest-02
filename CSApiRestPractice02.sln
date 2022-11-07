@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSApiRestPractice02", "CSApiRestPractice02.csproj", "{3A547FB5-CABA-45EF-89BA-805BBA48521E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A547FB5-CABA-45EF-89BA-805BBA48521E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A547FB5-CABA-45EF-89BA-805BBA48521E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A547FB5-CABA-45EF-89BA-805BBA48521E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A547FB5-CABA-45EF-89BA-805BBA48521E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AE1AC36-A369-4DE5-9397-F4C3C2BA98A5}
+	EndGlobalSection
+EndGlobal
