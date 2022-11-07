@@ -22,14 +22,57 @@ namespace CSApiRestPractice02.Domain {
 
         [Required]
         [Column("province")]
-        public string province { get; set; }
+        public string Province { get; set; }
 
         [Required]
         [Column("country")]
-        public string country { get; set; }
+        public string Country { get; set; }
 
         [Column("phone")]
-        public int phone { get; set; }
+        public int Phone { get; set; }
+
+        public Address() {
+
+        }
+
+        public Address(int addressId) {
+
+            AddressId = addressId;
+
+        }
+
+        public Address(int addressId, string street, int postalCode, string province, string country, int phone) {
+            AddressId = addressId;
+            Street = street;
+            PostalCode = postalCode;
+            Province = province;
+            Country = country;
+            Phone = phone;
+        }
+
+        public Address(int addressId, string street, int postalCode, string province, string country) {
+
+            AddressId = addressId;
+            Street = street;
+            PostalCode = postalCode;
+            Province = province;
+            Country = country;
+
+        }
+
+        public override bool Equals(object? obj) {
+            return obj is Address address &&
+                   AddressId == address.AddressId &&
+                   Street == address.Street &&
+                   PostalCode == address.PostalCode &&
+                   Province == address.Province &&
+                   Country == address.Country &&
+                   Phone == address.Phone;
+        }
+
+        public override int GetHashCode() {
+            return HashCode.Combine(AddressId, Street, PostalCode, Province, Country, Phone);
+        }
 
     }
 
