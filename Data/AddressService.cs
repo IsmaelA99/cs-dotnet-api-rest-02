@@ -64,7 +64,7 @@ namespace CSApiRestPractice02.Data {
 
         }
 
-        public async Task<Boolean> deleteAddress(int id) {
+        public async Task<Boolean> DeleteAddress(int id) {
 
             Address addressToDelete = await GetAddress(id);
 
