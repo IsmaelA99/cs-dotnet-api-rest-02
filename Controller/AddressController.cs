@@ -23,7 +23,7 @@ namespace CSApiRestPractice02.Controller {
 
             } catch (Exception e) {
 
-                return new BadRequestObjectResult(e.Message);
+                return new NotFoundObjectResult(e.Message);
 
             }
 
@@ -43,7 +43,7 @@ namespace CSApiRestPractice02.Controller {
 
             } catch (Exception e) {
 
-                return new BadRequestObjectResult(e.Message);
+                return new NotFoundObjectResult(e.Message);
 
             }
 
@@ -59,7 +59,7 @@ namespace CSApiRestPractice02.Controller {
                 Address addressSaved = await _addressService.SaveAddress(address);
                 return new OkObjectResult(addressSaved);
 
-            } catch (Exception e){
+            } catch (Exception e) {
 
                 return new BadRequestObjectResult(e.Message);
 
@@ -78,7 +78,7 @@ namespace CSApiRestPractice02.Controller {
 
                 return new OkObjectResult(addressUpdated);
 
-            } catch(Exception e) {
+            } catch (Exception e) {
 
                 return new BadRequestObjectResult(e.Message);
 
