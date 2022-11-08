@@ -76,7 +76,7 @@ namespace CSApiRestPractice02.Domain {
 
             return obj is Customer customer &&
                    CustomerId == customer.CustomerId &&
-                   EqualityComparer<Address>.Default.Equals(address, customer.address) &&
+                   EqualityComparer<Address>.Default.Equals(Address, customer.Address) &&
                    FirstName == customer.FirstName &&
                    LastName == customer.LastName &&
                    Email == customer.Email &&
