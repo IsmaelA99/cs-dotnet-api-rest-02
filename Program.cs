@@ -1,3 +1,4 @@
+using CSApiRestPractice02.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,11 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//builder.Services.AddDbContext<>(mysqlBuilder => {
+builder.Services.AddDbContext<CustomerService>(mysqlBuilder => {
 
-//    mysqlBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySQLConnection"));
+    mysqlBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySQLConnection"));
 
-//});
+});
+
+builder.Services.AddDbContext<AddressService>(mysqlBuilder => {
+
+    mysqlBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySQLConnection"));
+
+});
 
 var app = builder.Build();
 
