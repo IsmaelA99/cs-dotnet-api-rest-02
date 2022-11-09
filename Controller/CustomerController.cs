@@ -10,6 +10,12 @@ namespace CSApiRestPractice02.Controller {
 
         private CustomerService _customerService;
 
+        public CustomerController(CustomerService customerService) {
+
+            _customerService = customerService;
+
+        }
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Customer>))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]

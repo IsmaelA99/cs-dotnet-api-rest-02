@@ -10,6 +10,12 @@ namespace CSApiRestPractice02.Controller {
 
         private AddressService _addressService;
 
+        public AddressController(AddressService addressService) {
+
+            _addressService = addressService;
+
+        }
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Address>))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(string))]
